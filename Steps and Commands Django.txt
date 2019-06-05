@@ -199,6 +199,23 @@ To clcik on Username link from Home page, we will route them in a way that will 
 get_object_or_404(User, username=self.kwargs.get('username')) --> get this obj from 'User' model
 and user that we want is 'username' from URL
 For resetting Pwd and sending mail, we will use built-in django views.
+After adding password_reset html, we need to add the URL for inbuilt password_reset_confirm html as
+        path('password-reset-confirm/<uidb64>/<token>/' , 
+        auth_views.PasswordResetConfirmView.as_view(template_name='userAppTemplates/password_reset_confirm.html') , 
+        name='password_reset_confirm')
+Here we are using inbuilt views and as a result we are just creating templates but no views
+Now for sending emails, we need to set Gmail and need to setup sign in to gmail from python app
+for 2 factor auth in gmail, we need to create a password specifically for the application with which we are signin in
+we need to add few variables in settings.py file for setting up Email:
+        EMAIL_BACKEND = 'django.core.mail.backends.smtp.Emailbackend'
+        EMAIL_HOST = 'smtp.gmail.com'
+        EMAIL_PORT = 587
+        EMAIL_USE_TLS = True
+        EMAIL_HOST_USER = 'me.tirtha91@gmail.com'
+        EMAIL_HOST_PASSWORD = 'zyak elwa yuxo aojf'
+        This app passwords can be created from "https://myaccount.google.com/apppasswords" after setting 
+        2-Factor auth, followed by adding an app and giving the password
+
 
 
 

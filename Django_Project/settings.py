@@ -132,3 +132,11 @@ MEDIA_URL = '/media/'
 # to redirect App to Home page after login
 LOGIN_REDIRECT_URL = 'myblogApp-home' 
 LOGIN_URL = 'login'
+
+# Email Setup
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'me.tirtha91@gmail.com'
+EMAIL_HOST_PASSWORD = 'zyak elwa yuxo aojf'

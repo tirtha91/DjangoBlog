@@ -1,0 +1,4 @@
+Ways to deploy App:
+    own linux server(a virtual machine owned by AWS, Digital Ocean, Linode)
+    Herolu
+    Python anywhere

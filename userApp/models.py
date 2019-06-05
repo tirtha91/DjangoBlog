@@ -16,8 +16,6 @@ class Profile(models.Model):
 
     # def save(self, *args, **kwargs):
     #     super().save(*args, **kwargs)
-    # # def save(self):
-    # #     super().save()
 
     # #     # to open image of the current instance and modify its size and save
     #     img = Image.open(self.image.path)
