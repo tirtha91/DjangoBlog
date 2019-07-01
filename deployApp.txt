@@ -2,3 +2,19 @@ Ways to deploy App:
     own linux server(a virtual machine owned by AWS, Digital Ocean, Linode)
     Herolu
     Python anywhere
+
+To deploy django app to python anywhere:
+        Create an account with python anywhere
+        open bash
+        Perform git clone
+        do -> mkvirtualenv --python=/usr/bin/python3.7 myenv
+        virtual env will open
+        Then peform pip install django along with other dependencies
+        Then create a new webapp with manual config
+        Then add virtualebv name in the created app and edit wsgi file
+        then update the path in wsgi file like= '/home/tirtha09/djangoblog'
+        Update the settings with project name as - 'os.environ['DJANGO_SETTINGS_MODULE'] = 'Django_Project.settings'
+        Add allowed host in seetings.py => tirtha09.pythonanywhere.com/
+        Add static root in settings.py -> STATIC__ROOT = 'home/tirtha09/djangoblog/static'
+        then run from bash => python manage.py collectstatic
+        then add url in the statuic files url field -> /static/   directory => home/tirtha09/djangoblog/static
