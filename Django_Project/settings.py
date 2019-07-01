@@ -25,8 +25,7 @@ SECRET_KEY = '^o-#osvlj=ski8#63=t-i3=va^4@sthw0=m3^o%2^&#0oz+iwk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['tirtha09.pythonanywhere.com']
 
 # Application definition
 
@@ -40,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -122,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/tirtha09/djangoblog/static'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Media root is where our uploaded file will be located in the file system
@@ -130,7 +130,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 # media url is how we are going to access media in ou browser=> e.g. /media/profile_pics/images.jpg
 MEDIA_URL = '/media/'
 # to redirect App to Home page after login
-LOGIN_REDIRECT_URL = 'myblogApp-home' 
+LOGIN_REDIRECT_URL = 'myblogApp-home'
 LOGIN_URL = 'login'
 
 # Email Setup
