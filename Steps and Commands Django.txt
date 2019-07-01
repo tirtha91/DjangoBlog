@@ -219,3 +219,7 @@ we need to add few variables in settings.py file for setting up Email:
 
 
 
+
+
+
+
